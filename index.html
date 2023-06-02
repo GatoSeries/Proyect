@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://teachablemachine.withgoogle.com/models/XgqbdYweV/"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+
+        <center>
+
+<h3 class="btn btn-default heading">Reconocimiento de imagen</h3>
+
+            <br><br>
+
+
+            <p style="font-size: 22px;">El modelo está entrenado para identificar los siguientes objetos: </p>
+
+            <b class="nameObjects">
+                Gato <hr>
+                Cobejo <hr>
+                Tarjeta <hr>
+                Relog inteligente <hr>
+            </b>
+
+            <label>Vista de la cámara: </label>
+<div id="camera"></div>
+<br>
+<br>
+
+<div id="foto"></div>
+
+            <br><br>
+
+<button onclick="take()" class="btn btn-info">Get</button>
+            <br><br>
+
+<button onclick="check()" class="btn btn-success">Identify</button>
+            <br><br>
+
+
+            <br><br>
+
+
+            <p style="font-size: 22px;">Objeto: <span id="resultObject"></span></p>
+            <p style="font-size: 22px;">Precisión: <span id="accuracy"></span></p>
+
+        </center>
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
