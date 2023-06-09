@@ -15,8 +15,25 @@ Webcam.snap(function(data_uri){
 });
 }
 console.log("ml5 versiom: " + ml5.version)
-classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/XgqbdYweV/model.json", modelLoaded);
+classifier = ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/uCt1SpC5k/model.json", modelLoaded);
 
 function modelLoaded(){
     console.log("Model loaded");
 }
+function check(){
+    img = document.getElementById('capture_img');
+    classifier.classify(img, goResult);
+}
+
+function goResult(error, results){
+    if (error) {
+        console.error(error);
+    } else {
+        console.log(results);
+        document.getElementById("resultObject").innerHTML = results[0].label;
+        document.getElementById("accuracy").innerHTML = results[0].confidence.toFixed(3);
+
+    }
+}
+        
+
